@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Customer Manager</title>
+  <title>Gerenciador de Clientes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,18 +10,18 @@
   <header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "Custosmer Manager", root_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to (t 'customer_manager'), root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? -%>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to 'My Customers', customers_path %></li>
-              <li><%= link_to 'Account', edit_user_registration_path %></li>
-              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :get %></li>
+              <li><%= link_to t(:my_custumers), customers_path %></li>
+              <li><%= link_to t(:edit_account), edit_user_registration_path %></li>
+              <li><%= link_to t(:sign_out), destroy_user_session_path, :method => :get %></li>
             </ul>
           <% else -%>
             <ul class="nav navbar-nav pull-right">
-              <li><%= link_to 'Sign up', new_user_registration_path %></li>
-              <li><%= link_to 'Sign in', new_user_session_path %></li>
+              <li><%= link_to t(:sign_up), new_user_registration_path %></li>
+              <li><%= link_to t(:sign_in), new_user_session_path %></li>
             </ul>
           <% end -%>
         </nav>

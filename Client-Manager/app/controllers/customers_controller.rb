@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.where(:user_id => current_user.id)
   end
 
   # GET /customers/1
@@ -27,6 +27,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
 
     respond_to do |format|
+      @customer.user = current_user
       if @customer.save
         format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
         format.json { render :show, status: :created, location: @customer }

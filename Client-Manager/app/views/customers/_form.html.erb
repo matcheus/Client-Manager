@@ -30,7 +30,7 @@
 <br>
 
 <div class="actions">
-  <%= link_to 'Submit customer', form.submit, {:style=>'color:#FFFFFF;', class: 'btn btn-rounded btn-space btn-primary'} %> |
+  <%= form.submit 'Submit customer', {:style=>'color:#FFFFFF;', class: 'btn btn-rounded btn-space btn-primary'} %> |
   <%= link_to 'Back', customers_path, class: "btn btn-default" %>
 </div>
 <% end %>

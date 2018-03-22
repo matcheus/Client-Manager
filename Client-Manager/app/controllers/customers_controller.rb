@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.where(:user_id => current_user.id)
+    @customers = Customer.where(user_id: current_user.id)
   end
 
   # GET /customers/1

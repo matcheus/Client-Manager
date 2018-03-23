@@ -4,22 +4,22 @@
   <%= devise_error_messages! %>
 
 	  <div class="form-group">
-	  	<%= f.label :email %>
+	  	<%= f.label t(:email) %>
 	  	<%= f.email_field :email, autofocus: true, class: "form-control", required: true %>
 	  </div>
 
 	  <div class="form-group">
-	  	<%= f.label :password %>
+	  	<%= f.label t(:password) %>
 	  	<%= f.password_field :password, class: "form-control", required: true %>
 	  </div>
 
 	  <div class="form-group">
-	  	<%= f.label :password_confirmation %>
+	  	<%= f.label t(:password_confirmation) %>
 	  	<%= f.password_field :password_confirmation, class: "form-control", required: true %>
 	  </div>
 
 	  <div class="form-group">
-	  	<%= f.submit "Sign up", class: "btn btn-lg btn-primary" %>
+	  	<%= f.submit t(:sign_up), class: "btn btn-lg btn-primary" %>
 	  </div>
 <% end %>
 

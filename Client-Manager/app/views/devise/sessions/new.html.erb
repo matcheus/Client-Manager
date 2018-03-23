@@ -16,7 +16,7 @@
 
         <div class="checkbox">
         	<label>
-        	<%= f.check_box :remember_me, required: false, as: :boolean if devise_mapping.rememberable? %><%=t('views.devise.sessions.remember')%>
+        	   <%= f.check_box :remember_me, required: false, as: :boolean if devise_mapping.rememberable? %><%= t('views.devise.sessions.remember') %>
       		</label>
         </div>
 

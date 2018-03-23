@@ -1,0 +1,53 @@
+pt-BR:
+  activerecord:
+    models:
+      customer: "Cliente"
+      user: "Usuário"
+    attributes:
+      customer:
+        name: "Nome"
+        phone: "Telefone"
+        description: "Descrição"
+        user: "Proprietário"
+      user:
+        email: "E-mail"
+        password: "Senha"
+  views:
+    devise:
+      forgot: "Esqueceu sua senha?"
+      password: "Senha"
+      send: "Enviar"
+      sign_in: "Entrar"
+      sign_up: "Cadastre-se"
+      save: "Salvar"
+      are_you_sure: "Você tem certeza?"
+      sessions:
+        remember: "Lembrar-me"
+      registrations:
+        password_confirmation: "Confirmar senha"
+        new_password: "Nova Senha"
+        leave_it_blank: "Deixe em branco caso não queira mudar."
+        current_password: "Senha Atual"
+        type_new_password: "Digite sua nova senha para altera-la"
+        update: "Atualizar"
+        edit_user: "Editar Usuário"
+        unhappy: "Não está satisfeito?"
+        cancel: "Cancelar Minha Conta"
+        cancel_my_account: "Cancelar Minha Conta"
+    customers:
+      customer_destroy: "Cliente excluido com sucesso."
+      customer_save: "Cliente salvo com sucesso."
+      customer_update: "Cliente autalizado com sucesso."
+      new_customer: "Novo Cliente"
+      customer_manager: "Gerenciador de Clientes"
+      edit_customer: "Editar Cliente"
+      destroy: "Excluir"
+      show: "Exibir"
+      customers_list: "Lista de Clientes"
+      new_customer: "Novo Cliente"
+      back: "Voltar"
+      edit: "Editar"
+    layouts:
+      my_customers: "Meus Clientes"
+      sign_out: "Sair"
+      edit_account: "Editar Conta"

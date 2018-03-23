@@ -1,4 +1,17 @@
 pt-BR:
+  activerecord:
+    models:
+      customer: 'Cliente'
+      user: 'Usuário'
+    attributes:
+      customer:
+        name: 'Nome'
+        phone: 'Telefone'
+        description: 'Descrição'
+        user: 'Proprietário'
+      user:
+        email: 'Email'
+        password: 'Senha'
   views:
     devise:
       email: "E-mail"
@@ -8,7 +21,7 @@ pt-BR:
       sign_in: "Entrar"
       sign_up: "Cadastre-se"
       save: "Salvar"
-      :are_you_sure: "Você tem certeza?"
+      are_you_sure: "Você tem certeza?"
       sessions:
         remember: "Lembrar-me"
       registrations:
@@ -28,9 +41,6 @@ pt-BR:
       customer_update: "Cliente autalizado com sucesso."
       customer_manager: "Gerenciador de Clientes"
       new_customer: "Novo Cliente"
-      name: "Nome"
-      phone: "Telefone"
-      description: "Descrição"
       edit_customer: "Editar Cliente"
       destroy: "Excluir"
       show: "Exibir"

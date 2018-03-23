@@ -15,6 +15,10 @@ pt-BR:
         cancel: "Cancelar Minha Conta"
         cancel_my_account: "Cancelar Minha Conta"
     customers:
+      customer_destroy: "Cliente excluido com sucesso."
+      customer_save: "Cliente salvo com sucesso."
+      customer_update: "Cliente autalizado com sucesso."
+      customer_manager: "Gerenciador de Clientes"
       new_customer: "Novo Cliente"
       name: "Nome"
       phone: "Telefone"
@@ -26,13 +30,7 @@ pt-BR:
       new_customer: "Novo Cliente"
       back: "Voltar"
       edit: "Editar"
-
-
   are_you_sure: "Você tem certeza?"
-  customer_destroy: "Cliente excluido com sucesso."
-  customer_save: "Cliente salvo com sucesso."
-  customer_update: "Cliente autalizado com sucesso."
-  customer_manager: "Gerenciador de Clientes"
   my_custumers: "Meus Clientes"
   sign_in: "Entrar"
   sign_out: "Sair"

@@ -5,12 +5,12 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
         <div class="form-group">
-        	<%= f.label t('views.devise.email') %>
+        	<%= f.label t('activerecord.attributes.user.email') %>
         	<%= f.email_field :email, autofocus: true, class: "form-control", required: false %>
         </div>
 
         <div class="form-group">
-        	<%= f.label t('views.devise.password') %>
+        	<%= f.label t('activerecord.attributes.user.password') %>
         	<%= f.password_field :password, class: "form-control", required: false %>
         </div>
 

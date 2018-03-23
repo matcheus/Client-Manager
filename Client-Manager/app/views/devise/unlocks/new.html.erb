@@ -5,11 +5,11 @@
 
   <div class="field">
     <%= f.label t(:email) %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: t(:email) %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
+    <%= f.submit t(:send) %>
   </div>
 <% end %>
 

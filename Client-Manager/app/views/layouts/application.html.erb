@@ -6,10 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<% if user_signed_in? %>
+  <body>
+<% else %>
+  <body class="bodylogin">
+<% end %>
   <header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
+          <div class="navbar-brand">
+            <figure>
+              <%= image_tag("logo.png", alt: "logo", width: '40px') %>
+            </figure>
+          </div>
         <div id="logo" class="navbar-brand"><%= link_to (t 'views.customers.customer_manager'), root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? -%>

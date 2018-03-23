@@ -1,20 +1,19 @@
 pt-BR:
   activerecord:
     models:
-      customer: 'Cliente'
-      user: 'Usuário'
+      customer: "Cliente"
+      user: "Usuário"
     attributes:
       customer:
-        name: 'Nome'
-        phone: 'Telefone'
-        description: 'Descrição'
-        user: 'Proprietário'
+        name: "Nome"
+        phone: "Telefone"
+        description: "Descrição"
+        user: "Proprietário"
       user:
-        email: 'Email'
-        password: 'Senha'
+        email: "E-mail"
+        password: "Senha"
   views:
     devise:
-      email: "E-mail"
       forgot: "Esqueceu sua senha?"
       password: "Senha"
       send: "Enviar"
@@ -39,8 +38,8 @@ pt-BR:
       customer_destroy: "Cliente excluido com sucesso."
       customer_save: "Cliente salvo com sucesso."
       customer_update: "Cliente autalizado com sucesso."
-      customer_manager: "Gerenciador de Clientes"
       new_customer: "Novo Cliente"
+      customer_manager: "Gerenciador de Clientes"
       edit_customer: "Editar Cliente"
       destroy: "Excluir"
       show: "Exibir"

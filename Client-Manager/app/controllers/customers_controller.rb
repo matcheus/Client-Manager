@@ -30,7 +30,7 @@ class CustomersController < ApplicationController
     respond_to do |format|
       @customer.user = current_user
       if @customer.save
-        format.html { redirect_to @customer, notice: t('views.customers.customer_save')}
+        format.html { redirect_to @customer, notice: t('views.customers.customer_save') }
         format.json { render :show, status: :created, location: @customer }
       else
         format.html { render :new }
@@ -58,7 +58,7 @@ class CustomersController < ApplicationController
   def destroy
     @customer.destroy
     respond_to do |format|
-      format.html { redirect_to customers_url, notice: t('views.customers.customer_destroy')}
+      format.html { redirect_to customers_url, notice: t('views.customers.customer_destroy') }
       format.json { head :no_content }
     end
   end

@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%=t(:name)%>:</strong>
+  <strong><%=t('views.customers.name')%>:</strong>
   <%= @customer.name %>
 </p>
 
 <p>
-  <strong><%=t(:phone)%>:</strong>
+  <strong><%=t('views.customers.phone')%>:</strong>
   <%= @customer.fone %>
 </p>
 
 <p>
-  <strong><%=t(:description)%>:</strong>
+  <strong><%=t('views.customers.description')%>:</strong>
   <%= @customer.description %>
 </p>
 
-<%= link_to t(:edit), edit_customer_path(@customer), class: "btn btn-primary" %> |
-<%= link_to t(:back), customers_path, class: "btn btn-default" %>
+<%= link_to t('views.customers.edit'), edit_customer_path(@customer), class: "btn btn-primary" %> |
+<%= link_to t('views.customers.back'), customers_path, class: "btn btn-default" %>

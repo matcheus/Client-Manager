@@ -14,23 +14,23 @@
 
 
 <div class="form-group">
-  <%= form.label t(:name) %>
+  <%= form.label t('views.customers.name') %>
   <%= form.text_field :name, id: :customer_name, class: 'form-control' %>
 </div>
 
 <div class="form-group">
-  <%= form.label t(:phone) %>
+  <%= form.label t('views.customers.phone') %>
   <%= form.text_field :fone, id: :customer_fone, class: 'form-control' %>
 </div>
 
 <div class="form-group">
-  <%= form.label t(:description) %>
+  <%= form.label t('views.customers.description') %>
   <%= form.text_area :description, id: :customer_description, class: 'form-control' %>
 </div>
 <br>
 
 <div class="actions">
   <%= form.submit t(:save), class: "btn btn-primary" %> |
-  <%= link_to t(:back), customers_path, class: "btn btn-default" %>
+  <%= link_to t('views.customers.back'), customers_path, class: "btn btn-default" %>
 </div>
 <% end %>

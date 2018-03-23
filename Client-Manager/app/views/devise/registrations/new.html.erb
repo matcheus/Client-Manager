@@ -14,12 +14,12 @@
 	  </div>
 
 	  <div class="form-group">
-	  	<%= f.label t(:password_confirmation) %>
+	  	<%= f.label t('views.devise.registrations.password_confirmation') %>
 	  	<%= f.password_field :password_confirmation, class: "form-control", required: true %>
 	  </div>
 
 	  <div class="form-group">
-	  	<%= f.submit t(:sign_up), class: "btn btn-lg btn-primary" %>
+	  	<%= f.submit t(:save), class: "btn btn-lg btn-primary" %>
 	  </div>
 <% end %>
 

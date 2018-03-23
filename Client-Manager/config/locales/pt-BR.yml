@@ -1,6 +1,14 @@
 pt-BR:
   views:
     devise:
+      email: "E-mail"
+      forgot: "Esqueceu sua senha?"
+      password: "Senha"
+      send: "Enviar"
+      sign_in: "Entrar"
+      sign_up: "Cadastre-se"
+      save: "Salvar"
+      :are_you_sure: "Você tem certeza?"
       sessions:
         remember: "Lembrar-me"
       registrations:
@@ -30,14 +38,7 @@ pt-BR:
       new_customer: "Novo Cliente"
       back: "Voltar"
       edit: "Editar"
-  are_you_sure: "Você tem certeza?"
-  my_custumers: "Meus Clientes"
-  sign_in: "Entrar"
-  sign_out: "Sair"
-  password: "Senha"
-  email: "E-mail"
-  sign_up: "Cadastre-se"
-  forgot: "Esqueceu sua senha?"
-  edit_account: "Editar Conta"
-  save: "Salvar"
-  send: "Enviar"
+    layouts:
+      my_customers: "Meus Clientes"
+      sign_out: "Sair"
+      edit_account: "Editar Conta"

@@ -14,14 +14,14 @@
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? -%>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to t(:my_customers), customers_path %></li>
-              <li><%= link_to t(:edit_account), edit_user_registration_path %></li>
-              <li><%= link_to t(:sign_out), destroy_user_session_path, :method => :get %></li>
+              <li><%= link_to t('views.layouts.my_customers'), customers_path %></li>
+              <li><%= link_to t('views.layouts.edit_account'), edit_user_registration_path %></li>
+              <li><%= link_to t('views.layouts.sign_out'), destroy_user_session_path, :method => :get %></li>
             </ul>
           <% else -%>
             <ul class="nav navbar-nav pull-right">
-              <li><%= link_to t(:sign_up), new_user_registration_path %></li>
-              <li><%= link_to t(:sign_in), new_user_session_path %></li>
+              <li><%= link_to t('views.devise.sign_up'), new_user_registration_path %></li>
+              <li><%= link_to t('views.devise.sign_in'), new_user_session_path %></li>
             </ul>
           <% end -%>
         </nav>

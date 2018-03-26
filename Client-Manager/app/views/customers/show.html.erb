@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('activerecord.attributes.customer.name') %>:</strong>
   <%= @customer.name %>
 </p>
 
 <p>
-  <strong>Fone:</strong>
+  <strong><%= t('activerecord.attributes.customer.phone') %>:</strong>
   <%= @customer.fone %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('activerecord.attributes.customer.description') %>:</strong>
   <%= @customer.description %>
 </p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to t('views.customers.edit'), edit_customer_path(@customer), class: "btn btn-primary" %> |
+<%= link_to t('views.customers.back'), customers_path, class: "btn btn-default" %>

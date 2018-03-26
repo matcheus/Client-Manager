@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ClientManager</title>
+  <title><%= t('views.customers.customer_manager') %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+<% if user_signed_in? %>
+  <body>
+<% else %>
+  <body class="bodylogin">
+<% end %>
+  <header class="navbar navbar-default" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+          <div class="navbar-brand">
+            <figure>
+              <%= image_tag("logo.png", alt: "logo", width: '40px') %>
+            </figure>
+          </div>
+        <div id="logo" class="navbar-brand"><%= link_to (t 'views.customers.customer_manager'), root_path %></div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+          <% if user_signed_in? -%>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to t('views.layouts.my_customers'), customers_path %></li>
+              <li><%= link_to t('views.layouts.edit_account'), edit_user_registration_path %></li>
+              <li><%= link_to t('views.layouts.sign_out'), destroy_user_session_path, method: :get %></li>
+            </ul>
+          <% else -%>
+            <ul class="nav navbar-nav pull-right">
+              <li><%= link_to t('views.devise.sign_up'), new_user_registration_path %></li>
+              <li><%= link_to t('views.devise.sign_in'), new_user_session_path %></li>
+            </ul>
+          <% end -%>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div id="main_content" class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
+    <div id="content" class="col-md-9 center-block">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 </html>

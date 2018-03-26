@@ -1,32 +1,36 @@
 <%= form_with(model: customer, local: true) do |form| %>
-  <% if customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+<% if customer.errors.any? %>
 
-      <ul>
-      <% customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div id="error_explanation">
+  <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :customer_name %>
-  </div>
+  <ul>
+    <% customer.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= form.label :fone %>
-    <%= form.text_field :fone, id: :customer_fone %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :customer_description %>
-  </div>
+<div class="form-group">
+  <%= form.label :name %>
+  <%= form.text_field :name, id: :customer_name, class: 'form-control' %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="form-group">
+  <%= form.label t('activerecord.attributes.customer.phone') %>
+  <%= form.text_field :fone, id: :customer_fone, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form.label t('activerecord.attributes.customer.description') %>
+  <%= form.text_area :description, id: :customer_description, class: 'form-control' %>
+</div>
+<br>
+
+<div class="actions">
+  <%= form.submit t('views.devise.save'), class: "btn btn-primary" %> |
+  <%= link_to t('views.customers.back'), customers_path, class: "btn btn-default" %>
+</div>
 <% end %>

@@ -9,6 +9,7 @@ set :passenger_restart_with_touch, true
 set :puma_threads,    [4, 16]
 
 set :deploy_to, "/var/www/client_manager"
+set :rvm1_map_bins, %w{rake gem bundle ruby}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

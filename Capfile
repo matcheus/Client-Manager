@@ -10,6 +10,8 @@ require "capistrano/passenger"
 require "capistrano/yarn"
 require "capistrano/bundler"
 require 'capistrano/rvm'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 
 # Load the SCM plugin appropriate to your project:
 require "capistrano/scm/git"

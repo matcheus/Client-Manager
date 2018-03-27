@@ -25,7 +25,11 @@ gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'jquery-rails', '~>4.3.1'
 
+gem "capistrano", "~> 3.10.1"
 gem 'capistrano-rvm'
+gem "capistrano-rails", "~> 1.2"
+gem "capistrano-passenger", "~> 0.2.0"
+gem "capistrano-yarn"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -51,10 +55,6 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem "capistrano", "~> 3.10.1"
-  gem "capistrano-rails", "~> 1.2"
-  gem "capistrano-passenger", "~> 0.2.0"
-  gem "capistrano-yarn"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

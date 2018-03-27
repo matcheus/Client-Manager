@@ -1,13 +1,13 @@
 # Change these
 server 'your_server_ip', port: your_port_num, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@example.com:username/appname.git'
-set :application,     'appname'
+set :repo_url,        'git@github.com:matcheus/Client-Manager.git'
+set :application,     'Customer_Manager'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
-# Don't change these unless you know what you're doing
+# Don't change these
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production

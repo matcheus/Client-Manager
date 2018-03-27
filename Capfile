@@ -1,12 +1,16 @@
-# Load DSL and Setup Up Stages
-require 'capistrano/setup'
-require 'capistrano/deploy'
+# Load DSL and set up stages
+require "capistrano/setup"
 
-require 'capistrano/rails'
-require 'capistrano/bundler'
-require 'capistrano/rvm'
-require 'capistrano/puma'
+# Include default deployment tasks
+require "capistrano/deploy"
 
+# This will add tasks to your deploy process
+require "capistrano/rails"
+require "capistrano/passenger"
+require "capistrano/yarn"
+require "capistrano/bundler"
+
+# Load the SCM plugin appropriate to your project:
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 

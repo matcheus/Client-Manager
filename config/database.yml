@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
   username: root
-  password: <%= Rails.application.secrets[:database_password] %>
+  password: 15129513m
   socket: /var/run/mysqld/mysqld.sock
 
 production:

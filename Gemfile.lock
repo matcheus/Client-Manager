@@ -226,7 +226,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
   byebug
   capistrano (~> 3.10.1)
-  capistrano-passenger (~> 0.2.0)
+  capistrano-passenger
   capistrano-rails (~> 1.2)
   capistrano-rvm
   capistrano-yarn

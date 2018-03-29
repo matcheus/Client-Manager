@@ -42,8 +42,13 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
-  gem 'capistrano-yarn'
+  gem 'capistrano-yearn'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'web-console', '>=3.3.0'
 end
+
+  gem 'capistrano-yearn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -10,25 +10,7 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, "/var/www/client-manager"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
-
-set :linked_files, fetch(:linked_files, []).push('.env')
-
-set :scm, :git
-
-set :pty, true
-
-set :keep_releases, 5
-
-namespace :deploy do
-
-  task :cleanup_assets do
-    on roles :all do
-      execute "cd #{release_path}/ && ~/.rvm/bin/rvm default do bundle exec rake assets:clobber RAILS_ENV=#{fetch(:stage)}"
-    end
-  end
-
-  before :updated, :cleanup_assets
-end
+set :rvm1_map_bins, %w{rake gem bundle ruby}
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto

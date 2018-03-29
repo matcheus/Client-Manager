@@ -17,6 +17,10 @@ default: &default
   password: <%= Rails.application.secrets[:database_password] %>
   socket: /var/run/mysqld/mysqld.sock
 
+  production:
+  <<: *default
+  database: Client-Manager_development
+
 development:
   <<: *default
   database: Client-Manager_development

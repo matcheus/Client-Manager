@@ -3,8 +3,10 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-et :stage, :production
-server "deployer@ec2-54-172-110-147.compute-1.amazonaws.com", user: "deployer", roles: %w{app db web}
+set :stage, :production
+set :rails_env, :production
+set :branch, "feature/capistrano-deployment"
+server "ec2-54-172-110-147.compute-1.amazonaws.com", user: "deployer", roles: %w{app db web}
 
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value

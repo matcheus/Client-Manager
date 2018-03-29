@@ -50,7 +50,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "capistrano", "~> 3.4.0"
+  gem "capistrano", "~> 3.10.1"
   gem 'capistrano-rvm'
   gem "capistrano-rails", "~> 1.1.1"
   gem "capistrano-passenger"

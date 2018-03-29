@@ -25,6 +25,8 @@ gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'jquery-rails', '~>4.3.1'
 
+
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -38,12 +40,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :development do
-  gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-passenger'
-  gem 'capistrano-rvm'
-  gem 'capistrano-yarn'
-end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +50,11 @@ group :development, :test do
 end
 
 group :development do
+  gem "capistrano", "~> 3.10.1"
+  gem 'capistrano-rvm'
+  gem "capistrano-rails", "~> 1.2"
+  gem "capistrano-passenger"
+  gem "capistrano-yarn"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

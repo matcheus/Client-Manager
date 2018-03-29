@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:matcheus/Client-Manager.git"
 
 set :passenger_restart_with_touch, true
 
-set :puma_threads,    [4, 16]
+# set :puma_threads,    [4, 16]
 
 set :deploy_to, "/home/deployer/client_manager"
 set :rvm1_map_bins, %w{rake gem bundle ruby}
